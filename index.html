@@ -8,23 +8,42 @@
 </head>
 <body>
     <h1>Seb´s Pokédex</h1>
-    <form id="pokemonsuche" action="index.html" method="post">
+    <form id="pokemonsuche" action="index.html" method="get">
         <input type="text" name="pokemon" placeholder="z.B. Pikachu oder 25">
         <select name="suchkriterium">
             <option value="name">A</option>
             <option value="id">1</option>
         </select>
     </form>
-    <div>
-
+    <div id="pokedex">
+        <img class"picture" src=""> 
+        <p class="id">Hier kommt die ID.</p>
+        <p class="name">Hier kommt der Name.</p>
+        <p class="types">Hier kommen die Types.</p>
     </div>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
+
+<!-- // Ich will folgende Daten haben:
+// Bild
+// Nr. + .id
+// .name
+// .types.name -->
+
+
+<!-- 
+Ich baue nur eine Karte und optimiere den Inhalt so lange bis ich zufrieden bin.
+Dann erstelle ich daraus ein Template und clone es im js und iteriere über alle Pokemon.
+Ich habe damit eine Vorlage für alle Karten und schreibe nur einmal die Vorlage.
+Mege GEIL!
+-->
+
 
 <!-- 
 1. Label und zugehöriges input feld zum suchen nach Name
 1.1 Drop Down zum umschalten zwischen Suche nach Name und Suche nach Nummer
-2. Button um suche zu starten (alternativ mit enter)
+2. Button um suche zu starten (alternativ mit enter) ?? nötig oder suche automatisch staren ?!
 3. Alle Pokemon anzeigen zum scrollen (nach nummern sortiert)
 4. sortieren nach nummer auf- und absteigend
 5. sortieren nach alpahbet a-z und z-a
