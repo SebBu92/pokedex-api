@@ -19,7 +19,7 @@ h1 {
 }
 
 input {
-    background-color: rgb(254, 254, 254);
+    background-color: rgb(255, 255, 255);
     width: 400px;
 }
 
@@ -29,7 +29,33 @@ select {
 
 }
 
-div {
-    background-color: rgb(254, 254, 254);
+#pokedex {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 15px;
 }
 
+.picture {
+    height: auto;
+    width: 254px;
+    background-color: rgb(242, 242, 242);
+}
+
+.id {
+    padding-left: 10px;
+    margin-top: 2px;
+}
+
+.name {
+    font-family:'Times New Roman', Times, serif;
+    font-size: x-large;
+    padding-left: 10px;
+}
+
+.types {
+    padding-left: 10px;
+    background-color: rgb(238, 213, 53);
+    display: inline-block;
+    padding: 3px 20px 3px 20px;
+    border-radius: 10px;
+}
