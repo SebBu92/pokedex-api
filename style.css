@@ -7,8 +7,8 @@ h1 {
     margin: 20px;
 }
 
-#pokemonsuche input,
-#pokemonsuche select {
+#searchPokemon input,
+#searchPokemon select {
     height: 50px;
     padding: 5px;
     padding-left: 10px;
@@ -33,20 +33,31 @@ select {
     background-color: rgb(255, 255, 255);
     display: inline-block;
     padding: 15px;
+/*     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px; */
 }
 
-.picture {
+#pokecard_template {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.pokemonPicture {
     height: auto;
     width: 180px;
     background-color: rgb(242, 242, 242);
 }
 
-.id {
+.pokemonID {
     padding-left: 10px;
     margin-top: 2px;
 }
 
-.name {
+.pokemonName {
     font-family:'Times New Roman', Times, serif;
     font-size: x-large;
     padding-left: 10px;
@@ -71,4 +82,12 @@ select {
 
 .water {
     background-color: rgb(68,147,196);
+}
+
+.fire {
+    background-color: rgb(253,125,36);
+}
+
+.bug {
+    background-color: rgb(114,159,63);
 }

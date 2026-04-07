@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Seb´s Pokédex</h1>
-    <form id="pokemonsuche" action="index.html" method="get">
+    <form id="searchPokemon" action="index.html" method="get">
         <input type="text" name="pokemon" placeholder="z.B. Pikachu oder 25">
         <select name="suchkriterium">
             <option value="name">A</option>
@@ -16,12 +16,15 @@
         </select>
     </form>
     <template id="pokecard_template">
-        <img class="picture" src=""> 
-        <p class="id"></p>
-        <p class="name"></p>
+        <img class="pokemonPicture" src=""> 
+        <p class="pokemonID"></p>
+        <p class="pokemonName"></p>
         <div class="types-container"></div>
     </template>
-    <div id="pokecard"></div>
+    <div id="pokedex">
+        <div id="pokecard"></div>
+    </div>
+    <button id="loadPokemon">Mehr Pokemon laden</button>
     
     <script type="module" src="index.js"></script>
 </body>
