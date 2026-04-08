@@ -8,7 +8,8 @@ h1 {
 }
 
 #searchPokemon input,
-#searchPokemon select {
+#searchPokemon select,
+button {
     height: 50px;
     padding: 5px;
     padding-left: 10px;
@@ -16,6 +17,11 @@ h1 {
     margin-left: 10px;
     border: 1px solid black;
     border-radius: 50px;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
 }
 
 input {
@@ -26,23 +32,20 @@ input {
 select {
     width: 50px;
     text-decoration: underline;
-
 }
 
-#pokecard {
-    background-color: rgb(255, 255, 255);
+#pokedex {
     display: inline-block;
-    padding: 15px;
-/*     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 10px; */
-}
-
-#pokecard_template {
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 5px;
+}
+
+.pokecard {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
     margin: 10px;
 }
 
