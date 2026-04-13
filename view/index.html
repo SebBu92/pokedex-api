@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <h1>Seb´s Pokédex</h1>
+    <form id="searchPokemon" action="index.html" method="get">
+        <input type="text" name="pokemon" placeholder="z.B. Pikachu oder 25">
+        <select name="suchkriterium">
+            <option value="name">A</option>
+            <option value="id">1</option>
+        </select>
+    </form>
+    <template id="pokecard_template">
+        <div class="pokecard">
+            <img class="pokemonPicture" src=""> 
+            <p class="pokemonID"></p>
+            <p class="pokemonName"></p>
+            <div class="types-container"></div>
+        </div>
+    </template>
+    <div id="pokedex"></div>
+    <button id="loadPokemon">Mehr Pokemon laden</button>
+    
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
+
+
+<!-- 
+1. Label und zugehöriges input feld zum suchen nach Name
+1.1 Drop Down zum umschalten zwischen Suche nach Name und Suche nach Nummer
+2. Button um suche zu starten (alternativ mit enter) ?? nötig oder suche automatisch staren ?!
+3. Alle Pokemon anzeigen zum scrollen (nach nummern sortiert)
+4. sortieren nach nummer auf- und absteigend
+5. sortieren nach alpahbet a-z und z-a
+6. Pokemon mit Bild anzeigen, wenn ich anklicke mehr infos
+7. Infos: Größe und Gewicht
+-->
