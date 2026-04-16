@@ -7,23 +7,13 @@ h1 {
     margin: 20px;
 }
 
-#searchPokemon input,
-#searchPokemon select,
-button {
-    height: 50px;
-    padding: 5px;
-    padding-left: 10px;
-    margin: 5px;
-    margin-left: 10px;
-    border: 1px solid black;
-    border-radius: 50px;
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
-    background-color: rgb(255, 255, 255);
-    width: 400px;
-}
-
+button,
 input {
     background-color: rgb(255, 255, 255);
     width: 400px;
@@ -34,13 +24,60 @@ select {
     text-decoration: underline;
 }
 
+button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+#searchPokemon input,
+#searchPokemon select {
+    height: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 5px 5px 5px 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+#loadPokemon {
+    display: block;
+    margin: 20px auto;
+    height: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
 #pokedex {
-    display: inline-block;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 5px;
+    --cols: 6;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 220px);
+    gap: 10px;
+    justify-content: center;
+}
+
+@media (max-width: 1350px) {
+    #pokedex {
+        --cols: 4;
+    }
+}
+
+@media (max-width: 900px) {
+    #pokedex {
+        --cols: 3;
+    }
+}
+
+@media (max-width: 670px) {
+    #pokedex {
+        --cols: 2;
+    }
+}
+
+@media (max-width: 440px) {
+    #pokedex {
+        --cols: 1;
+    }
 }
 
 .pokecard {
@@ -94,3 +131,18 @@ select {
 .bug {
     background-color: rgb(114,159,63);
 }
+
+.flying {
+    background: linear-gradient(
+        to bottom,
+        rgb(61,200,239) 50%,
+        rgb(190,185,184) 50%
+    );
+}
+
+/* 
+Tag: 1
+Klasse: 10
+Pseudo: 10
+ID: 100
+ */

@@ -4,7 +4,7 @@ export async function fetchPokemonList(url) {
         if (!response.ok) {
             throw new Error(`HTTP Fehler: ${response.status}`)
         }
-        
+
         const pokemonList = await response.json();
 
         const singlePokemon = pokemonList.results
@@ -13,6 +13,8 @@ export async function fetchPokemonList(url) {
             );
         
         return Promise.all(singlePokemon);
+
+
     }
     catch(error){
         console.log(error);

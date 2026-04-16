@@ -18,7 +18,7 @@ export async function renderPokemonList(pokemonList) {
         for (const type of pokemon.types) {
             const typeElement = document.createElement("p")
             typeElement.classList.add(type.type.name)
-            typeElement.textContent = type.type.name[0].toUpperCase() + type.type.name.slice(1)
+            typeElement.textContent = textFormater(type.type.name)
             pokecardTemplate.querySelector(".types-container").appendChild(typeElement)
         };
 
