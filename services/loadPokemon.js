@@ -8,7 +8,6 @@ export async function loadPokemonList() {
     const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
 
     const pokemon = await fetchPokemonList(url);
-
     renderPokemonList(pokemon);
     offset += limit;
 }

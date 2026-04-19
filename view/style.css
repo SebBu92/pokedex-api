@@ -84,6 +84,8 @@ button:hover {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px black;
 }
 
 .pokemonPicture {
@@ -135,9 +137,65 @@ button:hover {
 .flying {
     background: linear-gradient(
         to bottom,
-        rgb(61,200,239) 50%,
-        rgb(190,185,184) 50%
+        rgb(61, 200, 239) 50%,
+        rgb(190, 185, 184) 50%
     );
+}
+
+.normal {
+    background-color: rgb(164, 172, 175)
+}
+
+.electric {
+    background-color: rgb(238, 213, 53);
+}
+
+.ground {
+    background: linear-gradient(
+        to bottom,
+        rgb(247, 222, 63) 50%,
+        rgb(171, 152, 66) 50%
+    );
+}
+
+.fairy {
+    background-color: rgb(253, 183, 234);
+}
+
+.fighting {
+    background-color: rgb(213, 103, 35);
+}
+
+.psychic {
+    background-color: rgb(243, 102, 185);
+}
+
+.steel {
+    background-color: rgb(158, 183, 184);
+}
+
+.ice {
+    background-color: rgb(80, 196, 231);
+}
+
+.rock {
+    background-color: rgb(164, 140, 33);
+}
+
+.ghost {
+    background-color: rgb(123, 98, 163);
+}
+
+.dragon {
+    background: linear-gradient(
+        to bottom,
+        rgb(84 , 164, 207) 50%,
+        rgb(241, 110, 87) 50%
+    );
+}
+
+.dark {
+    background-color: rgb(112, 112, 112);
 }
 
 /* 

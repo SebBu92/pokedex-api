@@ -13,7 +13,7 @@ export async function renderPokemonList(pokemonList) {
         pokecardTemplate.querySelector(".pokemonID").textContent = (`Nr. ${pokemon.id}`);
         
         const germanNameForSpecies = await fetchGermanName(pokemon.species.url);
-        pokecardTemplate.querySelector(".pokemonName").textContent = textFormater(germanNameForSpecies);
+        pokecardTemplate.querySelector(".pokemonName").textContent = germanNameForSpecies;
 
         for (const type of pokemon.types) {
             const typeElement = document.createElement("p")
