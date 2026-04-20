@@ -13,37 +13,22 @@ form {
     align-items: center;
 }
 
-button,
-input {
+#loadPokemon,
+.inputForSearch {
+    font-size: medium;
     background-color: rgb(255, 255, 255);
     width: 400px;
 }
 
-select {
-    width: 50px;
-    text-decoration: underline;
-}
-
-button:hover {
+#loadPokemon:hover {
     background-color: rgb(200, 200, 200);
 }
 
-#searchPokemon input,
-#searchPokemon select {
+#searchPokemon .inputForSearch {
     height: 50px;
     padding: 5px;
     padding-left: 10px;
     margin: 5px 5px 5px 10px;
-    border: 1px solid black;
-    border-radius: 50px;
-}
-
-#loadPokemon {
-    display: block;
-    margin: 20px auto;
-    height: 50px;
-    padding: 5px;
-    padding-left: 10px;
     border: 1px solid black;
     border-radius: 50px;
 }
@@ -54,6 +39,16 @@ button:hover {
     grid-template-columns: repeat(var(--cols), 220px);
     gap: 10px;
     justify-content: center;
+}
+
+#loadPokemon {
+    display: block;
+    margin: 20px auto;
+    height: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
 }
 
 @media (max-width: 1350px) {
@@ -108,8 +103,8 @@ button:hover {
 
 .types-container p{
     display: inline-block;
-    padding: 3px 20px 3px 20px;
-    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 15px;
     margin: 5px;
     margin-top: 1px;
 }

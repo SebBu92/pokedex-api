@@ -13,18 +13,26 @@ export async function fetchPokemonList(url) {
             );
         
         return Promise.all(singlePokemon);
-
-
     }
+
     catch(error){
         console.log(error);
     }
 }
 
 export async function fetchGermanName(speciesUrl) {
-    const response = await fetch(speciesUrl);
-    const species = await response.json();
-    
-    const german = species.names.find(languages => languages.language.name === "de");
-    return german.name;
+    try {
+        const response = await fetch(speciesUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP Fehler: ${response.status} `)
+        }
+        const species = await response.json();
+        
+        const german = species.names.find(languages => languages.language.name === "de");
+        return german.name;
+    }
+
+    catch(error){
+        console.log(error)
+    }
 }

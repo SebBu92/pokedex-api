@@ -8,12 +8,8 @@
 </head>
 <body>
     <h1>Seb´s Pokédex</h1>
-    <form id="searchPokemon" action="index.html" method="get">
-        <input type="text" name="pokemon" placeholder="z.B. Pikachu oder 25">
-        <select name="suchkriterium">
-            <option value="name">A</option>
-            <option value="id">1</option>
-        </select>
+    <form id="searchPokemon" method="get">
+        <input class="inputForSearch" type="text" name="searchValue" placeholder="z.B. Pikachu oder 25">
     </form>
     <template id="pokecard_template">
         <div class="pokecard">
