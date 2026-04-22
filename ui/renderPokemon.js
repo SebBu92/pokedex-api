@@ -34,7 +34,12 @@ function checkInputValue() {
 
         const inputValue = document.querySelector(".inputForSearch").value;
 
-        console.log("Eingabe:", inputValue);
+        if (inputValue === "") {
+            console.log("Leer")
+        }
+        else {
+            console.log("Eingabe:", inputValue);
+        }
 
     });
 }

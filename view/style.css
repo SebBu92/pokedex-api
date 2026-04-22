@@ -20,11 +20,18 @@ form {
     width: 400px;
 }
 
-#loadPokemon:hover {
+#loadPokemon:hover,
+.searchButton:hover {
     background-color: rgb(200, 200, 200);
 }
 
-#searchPokemon .inputForSearch {
+.searchButton {
+    width: 150px;
+}
+
+#searchPokemon 
+.inputForSearch,
+.searchButton {
     height: 50px;
     padding: 5px;
     padding-left: 10px;
