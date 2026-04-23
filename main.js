@@ -1,10 +1,15 @@
 import { loadPokemonList } from "./services/loadPokemon.js";
+import { loadMorePokemon } from "./services/loadPokemon.js";
+import { getInputValueForSearch } from "./utils/inputValueForSearch.js"
 
-loadPokemonList();
+function init() {
+    loadPokemonList();
+    loadMorePokemon();
+}
 
-const loadPokemon = document.getElementById("loadPokemon");
-loadPokemon.addEventListener("click", loadPokemonList);
-
+init();
+const search = getInputValueForSearch();
+console.log(search);
 /* 
 ToDo:
 - Suche nach ID implementieren

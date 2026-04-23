@@ -1,13 +1,15 @@
 import { fetchPokemonList } from "../api/pokemonApi.js";
 import { renderPokemonList } from "../ui/renderPokemon.js";
-
-let offset = 0;
-const limit = 12;
+import { buildUrl } from "./urlBuilder.js";
 
 export async function loadPokemonList() {
-    const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+    const url = buildUrl();
 
     const pokemon = await fetchPokemonList(url);
     renderPokemonList(pokemon);
-    offset += limit;
+}
+
+export function loadMorePokemon() {
+    const loadMorePokemon = document.getElementById("loadPokemon");
+    loadMorePokemon.addEventListener("click", loadPokemonList);
 }

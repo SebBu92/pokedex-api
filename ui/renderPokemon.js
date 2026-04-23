@@ -25,23 +25,3 @@ export async function renderPokemonList(pokemonList) {
         pokedexContainer.appendChild(pokecardTemplate)
     };
 }
-
-function checkInputValue() {
-    const form = document.getElementById("searchPokemon");
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // verhindert den reload der Seite
-
-        const inputValue = document.querySelector(".inputForSearch").value;
-
-        if (inputValue === "") {
-            console.log("Leer")
-        }
-        else {
-            console.log("Eingabe:", inputValue);
-        }
-
-    });
-}
-
-checkInputValue();
