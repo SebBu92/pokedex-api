@@ -1,17 +1,17 @@
-import { getInputValueForSearch } from "../utils/inputValueForSearch.js";
-
 let offset = 0;
 const limit = 12;
 
 export function buildUrl() {
-    const searchParameter = getInputValueForSearch();
+    const searchParameter = document.querySelector(".inputForSearch").value;
 
     if (searchParameter == "") {
         const url = `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`;
+        console.log(url)
         offset += limit;
         return url
     }
     else {
-        return `https://pokeapi.co/api/v2/pokemon/${searchParameter}`;
+        console.log(url)
+        return `https://pokeapi.co/api/v2/pokemon/5`;
     }
 }
