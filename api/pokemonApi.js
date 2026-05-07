@@ -19,8 +19,9 @@ export async function fetchPokemonList(url) {
         console.log(error);
     }
 }
-
-export async function fetchPokemonForSearch(url) {
+ // ab hier neue API Abfrage implementieren um einzelnes Pokemon zu laden
+ // zweiter fetch mit map wird nicht benötigt
+export async function fetchPokemonWithSearch(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
