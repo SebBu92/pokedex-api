@@ -9,6 +9,7 @@ function init() {
 
         console.log(document.querySelector(".inputForSearch").value);
         console.log(typeof(document.querySelector(".inputForSearch").value));
+        loadPokemonList();
 
     });
     loadPokemonList();
