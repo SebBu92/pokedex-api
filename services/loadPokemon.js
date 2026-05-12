@@ -21,7 +21,7 @@ export async function loadPokemonList() {
     else {
         const url = `https://pokeapi.co/api/v2/pokemon/6`;
         console.log(url)
-        const pokemon = await fetchPokemonForSearch(url);
+        const pokemon = await fetchSinglePokemon(url);
         console.log(pokemon);
         renderPokemonList([pokemon]);
     }
