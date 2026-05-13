@@ -1,13 +1,11 @@
 import { fetchPokemonList } from "../api/pokemonApi.js";
+import { fetchSinglePokemon } from "../api/pokemonApi.js";
 import { renderPokemonList } from "../ui/renderPokemon.js";
-import { buildUrl } from "./urlBuilder.js";
 
 let offset = 0;
 const limit = 12;
 
 export async function loadPokemonList() {
-    // const url = buildUrl();
-
     const inputValue = document.querySelector(".inputForSearch").value;
 
     if (inputValue == "") {
@@ -16,19 +14,17 @@ export async function loadPokemonList() {
         offset += limit;
         
         const pokemon = await fetchPokemonList(url);
+        console.log(pokemon);
         renderPokemonList(pokemon);
     }
     else {
+        // hier fehlt noch der event listener für die suche (wann soll es ausgeführt werden)
         const url = `https://pokeapi.co/api/v2/pokemon/6`;
         console.log(url)
         const pokemon = await fetchSinglePokemon(url);
         console.log(pokemon);
         renderPokemonList([pokemon]);
     }
-
-
-    // const pokemon = await fetchPokemonList(url);
-    // renderPokemonList([pokemon]);
 }
 
 export function loadMorePokemon() {

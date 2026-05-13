@@ -29,14 +29,9 @@ export async function fetchSinglePokemon(url) {
             throw new Error(`HTTP Fehler: ${response.status}`)
         }
 
-        const pokemonList = await response.json();
+        const singlePokemon = await response.json();
 
-        const singlePokemon = pokemonList.results
-            .map(pokemon => fetch(pokemon.url)
-            .then(result => result.json())
-            );
-        
-        return Promise.all(singlePokemon);
+        return singlePokemon;
     }
 
     catch(error){
