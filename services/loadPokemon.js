@@ -18,14 +18,26 @@ export async function loadPokemonList() {
         renderPokemonList(pokemon);
     }
     else {
-        // hier fehlt noch der event listener für die suche (wann soll es ausgeführt werden)
-        const url = `https://pokeapi.co/api/v2/pokemon/6`;
-        console.log(url)
-        const pokemon = await fetchSinglePokemon(url);
-        console.log(pokemon);
-        renderPokemonList([pokemon]);
+        const searchButton = document.querySelector(".searchButton");
+        searchButton.addEventListener("click", async function(event) {
+            event.preventDefault();
+            const url = `https://pokeapi.co/api/v2/pokemon/6`;
+            console.log(url)
+            const pokemon = await fetchSinglePokemon(url);
+            console.log(pokemon);
+            renderPokemonList([pokemon]);
+        });
     }
 }
+
+        // hier fehlt noch der event listener für die suche (wann soll es ausgeführt werden)
+        // const url = `https://pokeapi.co/api/v2/pokemon/6`;
+        // console.log(url)
+        // const pokemon = await fetchSinglePokemon(url);
+        // console.log(pokemon);
+        // renderPokemonList([pokemon]);
+//     }
+// }
 
 export function loadMorePokemon() {
     const loadMorePokemon = document.getElementById("loadPokemon");
